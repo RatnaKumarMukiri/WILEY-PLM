@@ -9,6 +9,13 @@
         <value>Product Family</value>
     </caseValues>
     <layouts>
+        <layout>Education</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
         <layout>Journal</layout>
         <sections>
             <label><!-- Custom Links --></label>
@@ -27,6 +34,17 @@
         <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Test Prep</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Product Family Details --></label>
+            <section>Product Family Details</section>
         </sections>
     </layouts>
     <layouts>

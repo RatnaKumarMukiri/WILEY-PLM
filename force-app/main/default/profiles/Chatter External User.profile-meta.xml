@@ -94,6 +94,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>PLM_CustomLookUpController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>PLM_ProjectOverride</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1559,6 +1563,36 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Global_Subject_Category_Description__mdt.Global_Subject_Category_Code__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Global_Subject_Category_Description__mdt.Global_Subject_Category_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Global_Subject_Category_Description__mdt.Location_del__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Global_Switch__mdt.Turn_On_Off__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Location__mdt.Location_Code__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Location__mdt.Location_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>PLM_Product_Family__c.Author__c</field>
         <readable>true</readable>
@@ -1666,6 +1700,26 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>PLM_Proposal__c.Proposal_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Temporary_Proposal__c.Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Temporary_Proposal__c.Edition_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Temporary_Proposal__c.PFRD__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Temporary_Proposal__c.Proposal_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2348,6 +2402,19 @@
         <layout>PLM_Editor__c-Editor Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>PLM_Global_Subject_Category_Description__mdt-Global Subject Category Description Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PLM_Global_Switch__mdt-Switch Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PLM_Location__mdt-Location Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PLM_Product_Family__c-Education</layout>
+        <recordType>PLM_Product_Family__c.Education</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>PLM_Product_Family__c-Journal</layout>
         <recordType>PLM_Product_Family__c.Journal</recordType>
     </layoutAssignments>
@@ -2357,6 +2424,14 @@
     <layoutAssignments>
         <layout>PLM_Product_Family__c-Reference</layout>
         <recordType>PLM_Product_Family__c.Reference</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PLM_Product_Family__c-Test Prep</layout>
+        <recordType>PLM_Product_Family__c.Test_Prep</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PLM_Product_Family__c-Test Prep</layout>
+        <recordType>PLM_Product_Family__c.Wiley_Efficient_Learning_WEL</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>PLM_Product_Family__c-Trade</layout>
@@ -2387,6 +2462,9 @@
     <layoutAssignments>
         <layout>PLM_Proposal__c-Proposal Layout</layout>
         <recordType>PLM_Proposal__c.Trade</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PLM_Temporary_Proposal__c-Temporary Proposal Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>

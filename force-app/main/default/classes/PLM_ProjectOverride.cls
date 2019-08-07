@@ -11,66 +11,21 @@ VERSION   AUTHOR                  DATE        DETAIL Description
       * @Description: Class used to create and update Product Family and Proposal Data
 **/
 public With Sharing class PLM_ProjectOverride {
-   public static List<RecordType> propRecTypeList;
-   public static String recPropName;
-   public static Id finRecId;
-   public static List<RecordType> prodFamRecTypeList;
-   public static PLM_Product_Family__c prodFamilyNewRec;
-   public static PLM_Proposal__c propRecordCre;
+    
    public static PLM_Temporary_Proposal__c tempProp;
-   public static string proposalRecordTypeName;
-	
-    /**
-      * @Description: Retrive RecordType Name of Product Family based on Proposal RecordType.
-      * @Params		: recId			 	- RecordType ID from New Action of Proposal Screen
-      * @return		: finRecId			- Return the name of the Product Family RecordType
-      */
-    @auraEnabled
-    public static Id recordTypeByName(Id recId){
-        propRecTypeList = new List<RecordType>();
-        prodFamRecTypeList = new List<RecordType>();
-        try{  
-            system.debug('in apex project override class'+recId);
-           propRecTypeList = [SELECT Id, SobjectType, Name, DeveloperName FROM RecordType WHERE SobjectType='PLM_Proposal__c' and Id=: recId LIMIT 1];
-            if(propRecTypeList.size() > 0){
-            	recPropName = propRecTypeList[0].Name;
-            
-               prodFamRecTypeList = [SELECT Id, SobjectType, Name, DeveloperName FROM RecordType WHERE SobjectType='PLM_Product_Family__c' and Name=: recPropName LIMIT 1];
-                system.debug('final rec id'+prodFamRecTypeList);
-                if(prodFamRecTypeList.size() > 0){
-                    finRecId = prodFamRecTypeList[0].Id;
-                    return finRecId;
-                }else{
-                    return null;
-                }
-            }else{
-                return null;
-            }
-        }catch(exception e){
-            system.debug('Exception occured in recordTypeByName method at Line '+ e.getLineNumber() +' Error Message '+e.getMessage());
-            return null;
-        }
-    }
+   public static String proposalRecordTypeName;
+   public static String productFamilyRecordTypeName;
     
     /**
       * @Description: Retrive RecordType Name of Selected Proposal RecordType.
       * @Params		: recId			 	- RecordType ID from New Action of Proposal Screen
-      * @return		: propRecTypeList	- Return the name of the Selected Proposal RecordType
+      * @return		: recordTypeByName	- Return the name of the Selected Proposal RecordType
       */
     
     @auraEnabled
     public static String recordTypeByNameForProposal(Id recId){
-        propRecTypeList = new List<RecordType>();
-        prodFamRecTypeList = new List<RecordType>();
-        try{  
-            system.debug('in apex project override class'+recId);
-           propRecTypeList = [SELECT Id, SobjectType, Name, DeveloperName FROM RecordType WHERE SobjectType='PLM_Proposal__c' and Id=: recId LIMIT 1];
-            if(propRecTypeList.size() > 0){
-            	recPropName = propRecTypeList[0].Name;
-                return recPropName;
-			}else{
-                return null;
-            }
+        try{
+            return Schema.getGlobalDescribe().get('PLM_Proposal__c').getDescribe().getRecordTypeInfosById().get(recId).getName();
         }catch(exception e){
             system.debug('Exception occured in recordTypeByNameForProposal method at Line '+ e.getLineNumber() +' Error Message '+e.getMessage());
             return null;
@@ -111,7 +66,6 @@ public With Sharing class PLM_ProjectOverride {
         
         return message;
     }
-    
      
      /**
       * @Description: Create Proposal records on Temp Object
@@ -120,21 +74,23 @@ public With Sharing class PLM_ProjectOverride {
       * 			  description 		-  Description from Proposal
       * 			  pFRD	 			-  pFRD from Proposal Screen
       * 			  strRecordTypeId	-  RecordType of New Proposal Creation
-      * @return		: recPropId			-  Passing ProductFamily RecordType using Proposal RecordType
+      * @return		: productFamilyRecordTypeName			-  Passing ProductFamily RecordType using Proposal RecordType
       */
     @auraEnabled 
-    public static string proposalInsert(Integer editionNumber, string proposalName,string description,string pFRD,string strRecordTypeId){
+    public static String proposalInsert(Integer editionNumber, string proposalName,string description,string pFRD,string strRecordTypeId){
         try{
-            string recPropId = recordTypeByName(strRecordTypeId);
+
             proposalRecordTypeName = Schema.getGlobalDescribe().get('PLM_Proposal__c').getDescribe().getRecordTypeInfosById().get(strRecordTypeId).getName();
+            productFamilyRecordTypeName = Schema.getGlobalDescribe().get('PLM_Product_Family__c').getDescribe().getRecordTypeInfosByName().get(proposalRecordTypeName).getRecordTypeId();
             tempProp = new PLM_Temporary_Proposal__c();
             tempProp.Description__c = description;
             tempProp.Edition_Number__c = editionNumber;
             tempProp.Proposal_Name__c = proposalName;
             //tempProp.PFRD__c = Date.valueOf(pFRD);
+            
             insert tempProp;
-            system.debug('@#@#@#@#@#@#recPropId'+recPropId);
-            return recPropId;
+
+            return productFamilyRecordTypeName;
         }catch(exception e){
             system.debug('In Exception proposalInsert '+e.getMessage()+ ' Line '+e.getLineNumber());
             return e.getMessage();

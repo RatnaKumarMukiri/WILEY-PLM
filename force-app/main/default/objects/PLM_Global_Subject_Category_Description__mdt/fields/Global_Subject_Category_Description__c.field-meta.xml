@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Subject_Category_Description__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Global Subject Category Description</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GE Allocated</fullName>
+                <default>true</default>
+                <label>GE Allocated</label>
+            </value>
+            <value>
+                <fullName>GE Business</fullName>
+                <default>false</default>
+                <label>GE Business</label>
+            </value>
+            <value>
+                <fullName>GE Sciences</fullName>
+                <default>false</default>
+                <label>GE Sciences</label>
+            </value>
+            <value>
+                <fullName>GE School</fullName>
+                <default>false</default>
+                <label>GE School</label>
+            </value>
+            <value>
+                <fullName>GE Microsoft</fullName>
+                <default>false</default>
+                <label>GE Microsoft</label>
+            </value>
+            <value>
+                <fullName>GE Math and Statistics</fullName>
+                <default>false</default>
+                <label>GE Math and Statistics</label>
+            </value>
+            <value>
+                <fullName>GE Engg &amp; Computer Sci</fullName>
+                <default>false</default>
+                <label>GE Engg &amp; Computer Sci</label>
+            </value>
+            <value>
+                <fullName>GE Other</fullName>
+                <default>false</default>
+                <label>GE Other</label>
+            </value>
+            <value>
+                <fullName>GE Applied Markets</fullName>
+                <default>false</default>
+                <label>GE Applied Markets</label>
+            </value>
+            <value>
+                <fullName>GE Social Sciences/Culinary</fullName>
+                <default>false</default>
+                <label>GE Social Sciences/Culinary</label>
+            </value>
+            <value>
+                <fullName>Undefined</fullName>
+                <default>false</default>
+                <label>Undefined</label>
+            </value>
+            <value>
+                <fullName>PD Allocated</fullName>
+                <default>false</default>
+                <label>PD Allocated</label>
+            </value>
+            <value>
+                <fullName>PD Business</fullName>
+                <default>false</default>
+                <label>PD Business</label>
+            </value>
+            <value>
+                <fullName>PD Consumer</fullName>
+                <default>false</default>
+                <label>PD Consumer</label>
+            </value>
+            <value>
+                <fullName>PD Education</fullName>
+                <default>false</default>
+                <label>PD Education</label>
+            </value>
+            <value>
+                <fullName>PD Other</fullName>
+                <default>false</default>
+                <label>PD Other</label>
+            </value>
+            <value>
+                <fullName>PD Psychology</fullName>
+                <default>false</default>
+                <label>PD Psychology</label>
+            </value>
+            <value>
+                <fullName>PD Architecture</fullName>
+                <default>false</default>
+                <label>PD Architecture</label>
+            </value>
+            <value>
+                <fullName>PD Technology</fullName>
+                <default>false</default>
+                <label>PD Technology</label>
+            </value>
+            <value>
+                <fullName>STMS Allocated</fullName>
+                <default>false</default>
+                <label>STMS Allocated</label>
+            </value>
+            <value>
+                <fullName>STMS Life Sciences</fullName>
+                <default>false</default>
+                <label>STMS Life Sciences</label>
+            </value>
+            <value>
+                <fullName>STMS Health Sciences</fullName>
+                <default>false</default>
+                <label>STMS Health Sciences</label>
+            </value>
+            <value>
+                <fullName>STMS Other</fullName>
+                <default>false</default>
+                <label>STMS Other</label>
+            </value>
+            <value>
+                <fullName>STMS Physical Sciences &amp; Engg</fullName>
+                <default>false</default>
+                <label>STMS Physical Sciences &amp; Engg</label>
+            </value>
+            <value>
+                <fullName>STMS Social Sci &amp; Humanities</fullName>
+                <default>false</default>
+                <label>STMS Social Sci &amp; Humanities</label>
+            </value>
+            <value>
+                <fullName>HE Allocated</fullName>
+                <default>false</default>
+                <label>HE Allocated</label>
+            </value>
+            <value>
+                <fullName>HE Business</fullName>
+                <default>false</default>
+                <label>HE Business</label>
+            </value>
+            <value>
+                <fullName>HE Sciences</fullName>
+                <default>false</default>
+                <label>HE Sciences</label>
+            </value>
+            <value>
+                <fullName>HE School</fullName>
+                <default>false</default>
+                <label>HE School</label>
+            </value>
+            <value>
+                <fullName>HE Microsoft</fullName>
+                <default>false</default>
+                <label>HE Microsoft</label>
+            </value>
+            <value>
+                <fullName>HE Math &amp; Statistics</fullName>
+                <default>false</default>
+                <label>HE Math &amp; Statistics</label>
+            </value>
+            <value>
+                <fullName>HE Engineering &amp; Computer Sci</fullName>
+                <default>false</default>
+                <label>HE Engineering &amp; Computer Sci</label>
+            </value>
+            <value>
+                <fullName>HE Other</fullName>
+                <default>false</default>
+                <label>HE Other</label>
+            </value>
+            <value>
+                <fullName>HE Applied Markets</fullName>
+                <default>false</default>
+                <label>HE Applied Markets</label>
+            </value>
+            <value>
+                <fullName>HE Social Sciences/Culinary</fullName>
+                <default>false</default>
+                <label>HE Social Sciences/Culinary</label>
+            </value>
+            <value>
+                <fullName>PD Architecture/Culinary</fullName>
+                <default>false</default>
+                <label>PD Architecture/Culinary</label>
+            </value>
+            <value>
+                <fullName>STMS Medicine</fullName>
+                <default>false</default>
+                <label>STMS Medicine</label>
+            </value>
+            <value>
+                <fullName>STMS Social Sciences &amp; Humanit</fullName>
+                <default>false</default>
+                <label>STMS Social Sciences &amp; Humanit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

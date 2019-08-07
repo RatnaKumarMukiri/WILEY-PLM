@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Global Subject Category Description --></label>
+    <name>Global_Subject_Category_Description__c</name>
+    <picklistValues>
+        <masterLabel>GE Allocated</masterLabel>
+        <translation><!-- GE Allocated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Applied Markets</masterLabel>
+        <translation><!-- GE Applied Markets --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Business</masterLabel>
+        <translation><!-- GE Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Engg &amp; Computer Sci</masterLabel>
+        <translation><!-- GE Engg &amp; Computer Sci --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Math and Statistics</masterLabel>
+        <translation><!-- GE Math and Statistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Microsoft</masterLabel>
+        <translation><!-- GE Microsoft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Other</masterLabel>
+        <translation><!-- GE Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE School</masterLabel>
+        <translation><!-- GE School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Sciences</masterLabel>
+        <translation><!-- GE Sciences --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Social Sciences/Culinary</masterLabel>
+        <translation><!-- GE Social Sciences/Culinary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Allocated</masterLabel>
+        <translation><!-- HE Allocated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Applied Markets</masterLabel>
+        <translation><!-- HE Applied Markets --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Business</masterLabel>
+        <translation><!-- HE Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Engineering &amp; Computer Sci</masterLabel>
+        <translation><!-- HE Engineering &amp; Computer Sci --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Math &amp; Statistics</masterLabel>
+        <translation><!-- HE Math &amp; Statistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Microsoft</masterLabel>
+        <translation><!-- HE Microsoft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Other</masterLabel>
+        <translation><!-- HE Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE School</masterLabel>
+        <translation><!-- HE School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Sciences</masterLabel>
+        <translation><!-- HE Sciences --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HE Social Sciences/Culinary</masterLabel>
+        <translation><!-- HE Social Sciences/Culinary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Allocated</masterLabel>
+        <translation><!-- PD Allocated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Architecture</masterLabel>
+        <translation><!-- PD Architecture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Architecture/Culinary</masterLabel>
+        <translation><!-- PD Architecture/Culinary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Business</masterLabel>
+        <translation><!-- PD Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Consumer</masterLabel>
+        <translation><!-- PD Consumer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Education</masterLabel>
+        <translation><!-- PD Education --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Other</masterLabel>
+        <translation><!-- PD Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Psychology</masterLabel>
+        <translation><!-- PD Psychology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PD Technology</masterLabel>
+        <translation><!-- PD Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STMS Allocated</masterLabel>
+        <translation><!-- STMS Allocated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STMS Health Sciences</masterLabel>
+        <translation><!-- STMS Health Sciences --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STMS Life Sciences</masterLabel>
+        <translation><!-- STMS Life Sciences --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STMS Medicine</masterLabel>
+        <translation><!-- STMS Medicine --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STMS Other</masterLabel>
+        <translation><!-- STMS Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STMS Physical Sciences &amp; Engg</masterLabel>
+        <translation><!-- STMS Physical Sciences &amp; Engg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STMS Social Sci &amp; Humanities</masterLabel>
+        <translation><!-- STMS Social Sci &amp; Humanities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STMS Social Sciences &amp; Humanit</masterLabel>
+        <translation><!-- STMS Social Sciences &amp; Humanit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Undefined</masterLabel>
+        <translation><!-- Undefined --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
