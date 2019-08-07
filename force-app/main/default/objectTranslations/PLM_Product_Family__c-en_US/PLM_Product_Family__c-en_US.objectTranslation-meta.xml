@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Family</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Family</value>
+    </caseValues>
+    <layouts>
+        <layout>Higher Ed</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Journal</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Project Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reference</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Trade</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>WEL</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Higher Education --></label>
+        <name>Higher_Education</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Journal --></label>
+        <name>Journal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reference --></label>
+        <name>Reference</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Trade --></label>
+        <name>Trade</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wiley Efficient Learning (WEL) --></label>
+        <name>Wiley_Efficient_Learning_WEL</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

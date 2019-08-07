@@ -1,0 +1,275 @@
+<aura:component implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId,lightning:hasPageReference,lightning:isUrlAddressable" access="global" controller="PLM_ProjectOverride">
+    <aura:attribute name="tempProposal" type="Temp_Proposal__c"/>
+    <aura:attribute name="today" type="Date" />
+     <aura:attribute name="picklistValues" type="Object" />
+    <aura:attribute name="propertyRecord" type="Account" />
+    <aura:attribute name="selValue" type="String" /> 
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="ProposalName__c" type="string" />
+    <aura:attribute name="Description__c" type="string" />
+    <aura:attribute name="editFamilyBoolean" type="boolean" default="false"/>
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="simpleRecord" type="Object" />
+    <aura:attribute name="RecPropId" type="string" />
+    <aura:attribute name="selectedProposalRecordTypeName" type="boolean" default="false" />
+     
+    <!--- Product family fields -->
+    <aura:attribute name="Copy_Product_Family__c" type="string" />
+    <aura:attribute name="Edition_Number__c" type="string" />
+    <aura:attribute name="Full_Title__c" type="string" />
+    <aura:attribute name="Global_Subject_Category_Description__c" type="string" />
+    <aura:attribute name="Primary_Market_Category__c" type="string" />
+    <aura:attribute name="Product_Family_Short_Title__c" type="string" />
+    <aura:attribute name="Product_line_Description__c" type="string" />
+    <aura:attribute name="Name" type="string" />
+    <aura:attribute name="Editor_Code__c" type="string" />
+    <aura:attribute name="Global_Subject_Category_Code__c" type="string" />
+    <aura:attribute name="Number_Of_Volumes__c" type="string" />
+    <aura:attribute name="Product_Family_Name__c" type="string" />
+    <aura:attribute name="Product_Line_Code__c" type="string" />
+    <aura:attribute name="Secondary_Market_Category__c" type="string" />
+    <aura:attribute name="Editor_Name__c" type="string" />
+    
+     <aura:attribute name="selectedLookUpRecord" type="sobjectType" default="{}" description="holds selected dealSet record"/>
+   
+    
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'Create New Product Family', 'value': 'Create New Product Family'},
+    {'label': 'Create New Edition on existing Product Family', 'value': 'Create New Edition on existing Product Family'},
+    {'label': 'Create Product Bundle', 'value': 'Create Product Bundle'},
+    ]"/>
+    <!--<force:recordData aura:id="forceRecord"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.propertyRecord}"
+                      fields="Id,Name,Beds__c,Baths__c,Price__c,Status__c"
+                      mode="EDIT" />-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <!--<c:PickListValues sObjectName="Property__c" fieldName="Status__c" picklistValues="{!v.picklistValues}" />-->
+    <aura:if isTrue="{!v.selectedProposalRecordTypeName}">
+    <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open ">
+        <div class="slds-modal__container" >
+                <div class="slds-modal__header">
+                    <h2 class="slds-text-heading--medium">Proposal Details</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap " style="height : 220px">
+            
+      <!-- <div class="slds-col slds-size_1-of-2">
+        <lightning:input type="string" name="ProposalName" label="Proposal Name" /> 
+       <c:PLM_LT_CustomLookup objectAPIName="PLM_Product_Family__c" IconName="custom:PLM_Product_Family__c" label="Product Family" selectedRecord="{!v.selectedLookUpRecord}"/>
+ </div> --> 
+                    
+     
+      <div class="slds-col slds-size_1-of-2 "> 
+        <lightning:input type="string" name="ProposalName" label="Proposal Name" value="{!v.tempProposal.Proposal_Name__c}" required="true"/>
+      </div>
+      <div class="slds-col slds-size_1-of-2 slds-p-left_large"> 
+        <lightning:input type="string" name="EditionNumber"   label="Edition Number" />
+      </div>
+      <div class="slds-col slds-size_1-of-2" >
+        <lightning:input type="Date" name="PFRD" value="{!v.today}" label="PFRD" required="true"/>
+      </div>
+      <div class="slds-col slds-size_1-of-2 slds-p-left_large">
+        <lightning:input type="string" name="Description"   label="Description" />
+      </div>
+        
+   
+            </div>
+
+            <div class="slds-modal__footer">                
+                <lightning:button variant="neutral" label="Cancel" onclick="{!c.cancelDialog}"/>
+                <lightning:button variant="brand" label="Next" onclick="{!c.closeModal}" />
+            </div>
+        </div>
+    </div>
+    <!-- Added by Rama -->
+      <div aura:id="editDialog1" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-close ">
+        <div class="slds-modal__container" >
+                <div class="slds-modal__header">
+                    <h2 class="slds-text-heading--medium">Select Product Family Group</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap " style="height : 190px">
+                <!--<lightning:radioGroup class="slds-size_1-of-1 slds-p-horizontal_x-small"  name="progress"  value="inProgress" placeholder="Select Progress" options="{! v.options }" onchange="{! c.handleChange }"/>-->
+                
+                <lightning:radioGroup class="slds-size--1-of-1 slds-p-horizontal_x-small" 
+                                      name="progress" 
+                                      value="inProgress" 
+                                      placeholder="Select Progress" 
+                                      options="{! v.options }"
+                                      onchange="{!c.handleChange}"
+                                      style="font-size: 30px;"/>
+                <!--<lightning:select aura:id="propStatus" name="propStatus" label="Status" class="slds-size-1-of-2 slds-p-horizontal_x-small">
+                    <aura:iteration items="{!v.picklistValues}" var="item">
+                        <option value="{!item}">{!item}</option>
+                    </aura:iteration>
+                </lightning:select>-->
+            </div>
+            <div class="slds-modal__footer">                
+                <lightning:button variant="neutral" label="Cancel" onclick="{!c.cancelDialog}"/>
+                
+                <lightning:button variant="brand" label="Next" onclick="{!c.saveRecord}" />
+            </div>
+        </div>
+    </div>
+  
+    <aura:if isTrue="{!v.editFamilyBoolean}">
+      
+        <div aura:id="editDialog2" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-close ">
+            <div class="slds-modal__container" >
+                <div class="slds-modal__header">
+                    <h2 class="slds-text-heading--medium">Select Product Family</h2>
+                </div>
+                <div class="slds-modal__content 
+                            slds-p-around--small 
+                           " style="height : 320px;width:640px">
+                    
+                      <c:PLM_LT_CustomLookup objectAPIName="PLM_Product_Family__c" IconName="custom:PLM_Product_Family__c" label="Product Family" selectedRecord="{!v.selectedLookUpRecord}"/>
+               <!-- sub Header -->
+               
+
+                    <div class="slds-grid slds-m-top_small slds-truncate" title="Product family details"
+                         style='background-color: #e4e3e3;
+                                border-top-right-radius: 5px;
+    border-top-left-radius: 5px;'><span class='slds-p-vertical_xxx-small slds-p-left_xx-small'>Product family details</span></div>
+
+
+                    <!-- End Sub header -->
+                   <div class='prodfamDetClass' >
+                    <lightning:recordEditForm recordId="{!v.selectedLookUpRecord.Id}" objectApiName="PLM_Product_Family__c">
+                   <lightning:messages />
+                  <div class="slds-grid slds-wrap slds-gutters slds-cell-wrap ">
+              <div class="slds-col slds-p-horizontal_medium" > 
+                   <lightning:outputField fieldName="Full_Title__c" />
+                   <lightning:outputField fieldName="Global_Subject_Category_Description__c" />
+                   <lightning:outputField fieldName="Primary_Market_Category__c" />
+                   <lightning:outputField fieldName="Product_Family_Short_Title__c" />               
+                   <lightning:outputField fieldName="Name" />
+                   <!-- <lightning:outputField fieldName="CreatedBy.FirstName" />-->
+                   <lightning:outputField fieldName="Editor_Code__c" />
+                   <lightning:inputField aura:id="edititonNumber" fieldName="Edition_Number__c" />
+               </div>
+               <div class="slds-col">
+                   <lightning:outputField fieldName="Global_Subject_Category_Code__c" />
+                   <lightning:outputField fieldName="Number_Of_Volumes__c" />
+                   <lightning:outputField fieldName="Product_Family_Name__c" />
+                   <lightning:outputField fieldName="Product_Line_Code__c" />
+                   <lightning:outputField fieldName="Secondary_Market_Category__c" />
+                   <lightning:outputField fieldName="Editor_Name__c" />
+                   
+               </div>
+                   </div>
+                </lightning:recordEditForm>
+               </div>
+                </div>
+                
+                <div class="slds-modal__footer">                
+                    <lightning:button variant="neutral" label="Cancel" onclick="{!c.cancelDialog}"/>
+                    <lightning:button variant="brand" label="Create New Edition" onclick="{!c.saveRecordProductFamily}" />
+                </div>
+                
+    
+                
+            </div>
+        </div>
+    </aura:if> 
+     <!-- Closed -->
+        <!--Product Family dilog start-->
+            <div aura:id="productFamily" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-close ">
+            <div class="slds-modal__container" >
+                <div class="slds-modal__header">
+                    <h2 class="slds-text-heading--medium">New Product Family</h2>
+                </div>
+                <div class="slds-modal__content 
+                            slds-p-around--small 
+                           " style="height : 220px">
+                   <div  class=' slds-grid  
+                            slds-grid_align-spread 
+                            slds-wrap'>
+                       <div class='slds-size_1-of-2 slds-p-right_xx-small'>
+                                 
+                        <div class='slds-p-bottom_xx-small'>
+                                <lightning:input type="string" name="Copy Product Family" label="Copy Product Family" value="{!v.Copy_Product_Family__c}" />
+                        </div>
+                       
+                        <div class='slds-p-bottom_xx-small'>
+                                <lightning:input type="string" name="Edition Number" label="Edition Number" value="{!v.Edition_Number__c}"/>
+                        </div>
+                       
+                        <div class='slds-p-bottom_xx-small'>
+                                <lightning:input type="string" name="Full Title" label="Full Title" value="{!v.Full_Title__c}" />
+                        </div>
+                        
+                        <div class='slds-p-bottom_xx-small'>
+                                <lightning:input type="string" name="Global Subject Category Description" label="Global Subject Category Description" value="{!v.Global_Subject_Category_Description__c	}" />
+                        </div>
+                       
+                       
+                        
+                        <div class='slds-p-bottom_xx-small'>
+                                <lightning:input type="string" name="Product Family Short Title" label="Product Family Short Title" value="{!v.Product_Family_Short_Title__c}" />
+                        </div>
+                       
+                       
+                      
+                    </div>
+                       <div class='slds-size_1-of-2'>
+                     <div class='slds-p-bottom_xx-small'>
+                            
+               			<lightning:input type="string" name="Family Name" label="Family Name" value="{!v.Name}" />
+                           
+                     </div> 
+                     
+                     <div class='slds-p-vertical_xx-small'>
+                                <lightning:input type="string" name="Editor Code" label="Editor Code" value="{!v.Editor_Code__c}" />
+                        </div>
+                    <div class='slds-p-vertical_xx-small'>
+                                <lightning:input type="string" name="Global Subject Category Code" label="Global Subject Category Code" value="{!v.Global_Subject_Category_Code__c}" />
+                        </div>
+                     <div  class='slds-p-vertical_xx-small'>
+                                <lightning:input type="string" name="Number Of Volumes" label="Number Of Volumes" value="{!v.Number_Of_Volumes__c}" />
+                        </div>
+                    <div class='slds-p-vertical_xx-small'>
+                                <lightning:input type="string" name="Product Family Name" label="Product Family Name" value="{!v.Product_Family_Name__c}" />
+                        </div>
+                     <div  class='slds-p-vertical_xx-small'>
+                             <lightning:input type="string" name="Product Line Code" label="Product Line Code" value="{!v.Product_Line_Code__c}" />
+                        </div>
+                      
+                       </div>
+                    </div>
+                  
+                       </div>
+                
+                <div class="slds-modal__footer">                
+                    <lightning:button variant="neutral" label="Cancel" onclick="{!c.cancelDialog}"/>
+                    <lightning:button variant="brand" label="Save" onclick="{!c.saveRecordNewProductFamily}" />
+                </div>
+                
+    
+                
+            </div>
+        </div>
+    <aura:set attribute="else"> 
+        <div aura:id="recordTypeErrorDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-close">
+        <div class="slds-modal__container" >
+            <div class="slds-modal__header">
+				
+            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                  <span class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small" title="Description of icon when needed">
+                    <lightning:icon iconName="utility:note" variant="bare"/>
+                  </span>
+                  <h3>Note</h3>
+            </div>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium slds-text-align_center" style="height : 150px">
+                Please select reference, other business lines are work in progress.
+            </div>
+            <div class="slds-modal__footer">                
+                <lightning:button variant="brand" label="Go back" onclick="{!c.cancelDialog}"/>
+            </div>
+        </div>
+    </div>
+    </aura:set>
+ </aura:if>
+    <!--Product Family dilog End-->
+    <div aura:id="overlay" class="slds-backdrop slds-backdrop--open"></div>
+</aura:component>

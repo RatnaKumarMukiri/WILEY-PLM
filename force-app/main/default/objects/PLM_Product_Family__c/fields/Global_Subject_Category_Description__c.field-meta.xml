@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Subject_Category_Description__c</fullName>
+    <externalId>false</externalId>
+    <label>Global Subject Category Description</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Group_Origin_Description__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GE Allocated</fullName>
+                <default>false</default>
+                <label>GE Allocated</label>
+            </value>
+            <value>
+                <fullName>GE Business</fullName>
+                <default>false</default>
+                <label>GE Business</label>
+            </value>
+            <value>
+                <fullName>GE Sciences</fullName>
+                <default>false</default>
+                <label>GE Sciences</label>
+            </value>
+            <value>
+                <fullName>GE School</fullName>
+                <default>false</default>
+                <label>GE School</label>
+            </value>
+            <value>
+                <fullName>GE Microsoft</fullName>
+                <default>false</default>
+                <label>GE Microsoft</label>
+            </value>
+            <value>
+                <fullName>GE Math and Statistics</fullName>
+                <default>false</default>
+                <label>GE Math and Statistics</label>
+            </value>
+            <value>
+                <fullName>GE Engg &amp; Computer Sci</fullName>
+                <default>false</default>
+                <label>GE Engg &amp; Computer Sci</label>
+            </value>
+            <value>
+                <fullName>GE Other</fullName>
+                <default>false</default>
+                <label>GE Other</label>
+            </value>
+            <value>
+                <fullName>GE Applied Markets</fullName>
+                <default>false</default>
+                <label>GE Applied Markets</label>
+            </value>
+            <value>
+                <fullName>GE Social Sciences/Culinary</fullName>
+                <default>false</default>
+                <label>GE Social Sciences/Culinary</label>
+            </value>
+            <value>
+                <fullName>Undefined</fullName>
+                <default>false</default>
+                <label>Undefined</label>
+            </value>
+            <value>
+                <fullName>PD Allocated</fullName>
+                <default>false</default>
+                <label>PD Allocated</label>
+            </value>
+            <value>
+                <fullName>PD Business</fullName>
+                <default>false</default>
+                <label>PD Business</label>
+            </value>
+            <value>
+                <fullName>PD Consumer</fullName>
+                <default>false</default>
+                <label>PD Consumer</label>
+            </value>
+            <value>
+                <fullName>PD Education</fullName>
+                <default>false</default>
+                <label>PD Education</label>
+            </value>
+            <value>
+                <fullName>PD Other</fullName>
+                <default>false</default>
+                <label>PD Other</label>
+            </value>
+            <value>
+                <fullName>PD Psychology</fullName>
+                <default>false</default>
+                <label>PD Psychology</label>
+            </value>
+            <value>
+                <fullName>PD Architecture</fullName>
+                <default>false</default>
+                <label>PD Architecture</label>
+            </value>
+            <value>
+                <fullName>PD Technology</fullName>
+                <default>false</default>
+                <label>PD Technology</label>
+            </value>
+            <value>
+                <fullName>STMS Allocated</fullName>
+                <default>false</default>
+                <label>STMS Allocated</label>
+            </value>
+            <value>
+                <fullName>STMS Life Sciences</fullName>
+                <default>false</default>
+                <label>STMS Life Sciences</label>
+            </value>
+            <value>
+                <fullName>STMS Health Sciences</fullName>
+                <default>false</default>
+                <label>STMS Health Sciences</label>
+            </value>
+            <value>
+                <fullName>STMS Other</fullName>
+                <default>false</default>
+                <label>STMS Other</label>
+            </value>
+            <value>
+                <fullName>STMS Physical Sciences &amp; Engg</fullName>
+                <default>false</default>
+                <label>STMS Physical Sciences &amp; Engg</label>
+            </value>
+            <value>
+                <fullName>STMS Social Sci &amp; Humanities</fullName>
+                <default>false</default>
+                <label>STMS Social Sci &amp; Humanities</label>
+            </value>
+            <value>
+                <fullName>HE Allocated</fullName>
+                <default>false</default>
+                <label>HE Allocated</label>
+            </value>
+            <value>
+                <fullName>HE Business</fullName>
+                <default>false</default>
+                <label>HE Business</label>
+            </value>
+            <value>
+                <fullName>HE Sciences</fullName>
+                <default>false</default>
+                <label>HE Sciences</label>
+            </value>
+            <value>
+                <fullName>HE School</fullName>
+                <default>false</default>
+                <label>HE School</label>
+            </value>
+            <value>
+                <fullName>HE Microsoft</fullName>
+                <default>false</default>
+                <label>HE Microsoft</label>
+            </value>
+            <value>
+                <fullName>HE Math &amp; Statistics</fullName>
+                <default>false</default>
+                <label>HE Math &amp; Statistics</label>
+            </value>
+            <value>
+                <fullName>HE Engineering &amp; Computer Sci</fullName>
+                <default>false</default>
+                <label>HE Engineering &amp; Computer Sci</label>
+            </value>
+            <value>
+                <fullName>HE Other</fullName>
+                <default>false</default>
+                <label>HE Other</label>
+            </value>
+            <value>
+                <fullName>HE Applied Markets</fullName>
+                <default>false</default>
+                <label>HE Applied Markets</label>
+            </value>
+            <value>
+                <fullName>HE Social Sciences/Culinary</fullName>
+                <default>false</default>
+                <label>HE Social Sciences/Culinary</label>
+            </value>
+            <value>
+                <fullName>PD Architecture/Culinary</fullName>
+                <default>false</default>
+                <label>PD Architecture/Culinary</label>
+            </value>
+            <value>
+                <fullName>STMS Medicine</fullName>
+                <default>false</default>
+                <label>STMS Medicine</label>
+            </value>
+            <value>
+                <fullName>STMS Social Sciences &amp; Humanit</fullName>
+                <default>false</default>
+                <label>STMS Social Sciences &amp; Humanit</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>Undefined</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PD Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PD Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PD Consumer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PD Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PD Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PD Psychology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PD Architecture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>PD Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>STMS Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>STMS Life Sciences</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>STMS Health Sciences</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>STMS Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>STMS Physical Sciences &amp; Engg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>STMS Social Sci &amp; Humanities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Sciences</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Microsoft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Math &amp; Statistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Engineering &amp; Computer Sci</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Applied Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>HE Social Sciences/Culinary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Allocated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Sciences</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Microsoft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Math and Statistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Engg &amp; Computer Sci</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Applied Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <controllingFieldValue>United Kingdom</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>GE Social Sciences/Culinary</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
