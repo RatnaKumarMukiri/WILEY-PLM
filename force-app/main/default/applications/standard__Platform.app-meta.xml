@@ -9,4 +9,13 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-Chatter</tabs>
     <tabs>standard-File</tabs>
+    <tabs>PLM_Product_Family__c</tabs>
+    <tabs>PLM_Editor__c</tabs>
+    <tabs>PLM_Author__c</tabs>
+    <tabs>PLM_Author_Title__c</tabs>
+    <tabs>PLM_Edition__c</tabs>
+    <tabs>PLM_Proposal__c</tabs>
+    <tabs>PLM_Product_line_Description__c</tabs>
+    <tabs>PLM_Author_Assignment__c</tabs>
+    <tabs>PLM_Associated_Products__c</tabs>
 </CustomApplication>

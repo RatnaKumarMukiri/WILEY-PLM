@@ -3,7 +3,7 @@
     <fullName>Product_line_Description__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
     <externalId>false</externalId>
-    <label>Product line Description</label>
+    <label>Product Line</label>
     <lookupFilter>
         <active>true</active>
         <filterItems>

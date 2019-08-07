@@ -3,7 +3,7 @@
     <fullName>Editor_Name__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
     <externalId>false</externalId>
-    <label>Editor Name</label>
+    <label>Editor</label>
     <lookupFilter>
         <active>true</active>
         <filterItems>
@@ -16,7 +16,7 @@
     <referenceTo>PLM_Editor__c</referenceTo>
     <relationshipLabel>Product Family</relationshipLabel>
     <relationshipName>Projects</relationshipName>
-    <required>true</required>
+    <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>

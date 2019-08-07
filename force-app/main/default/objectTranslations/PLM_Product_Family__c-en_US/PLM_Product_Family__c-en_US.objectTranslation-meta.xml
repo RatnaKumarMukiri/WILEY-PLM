@@ -9,13 +9,6 @@
         <value>Product Family</value>
     </caseValues>
     <layouts>
-        <layout>Higher Ed</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
-    <layouts>
         <layout>Journal</layout>
         <sections>
             <label><!-- Custom Links --></label>
@@ -43,16 +36,9 @@
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <layouts>
-        <layout>WEL</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
     <recordTypes>
-        <label><!-- Higher Education --></label>
-        <name>Higher_Education</name>
+        <label><!-- Education --></label>
+        <name>Education</name>
     </recordTypes>
     <recordTypes>
         <label><!-- Journal --></label>
@@ -61,6 +47,10 @@
     <recordTypes>
         <label><!-- Reference --></label>
         <name>Reference</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Test Prep --></label>
+        <name>Test_Prep</name>
     </recordTypes>
     <recordTypes>
         <label><!-- Trade --></label>

@@ -1,17 +1,22 @@
 <aura:component implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId,lightning:hasPageReference,lightning:isUrlAddressable" access="global" controller="PLM_ProjectOverride">
-    <aura:attribute name="tempProposal" type="Temp_Proposal__c"/>
-    <aura:attribute name="today" type="Date" />
-     <aura:attribute name="picklistValues" type="Object" />
+    
+    
+    <aura:attribute name="picklistValues" type="Object" />
     <aura:attribute name="propertyRecord" type="Account" />
     <aura:attribute name="selValue" type="String" /> 
     <aura:attribute name="recordId" type="String" />
     <aura:attribute name="ProposalName__c" type="string" />
     <aura:attribute name="Description__c" type="string" />
+     <aura:attribute name="Edition_Prop_Number__c" type="Integer" />
     <aura:attribute name="editFamilyBoolean" type="boolean" default="false"/>
+    <aura:attribute name="showProdFamDetSection" type="boolean" default="false"/>
     <aura:attribute name="record" type="Object" />
     <aura:attribute name="simpleRecord" type="Object" />
     <aura:attribute name="RecPropId" type="string" />
     <aura:attribute name="selectedProposalRecordTypeName" type="boolean" default="false" />
+    <aura:attribute name="today" type="Date" default=""/>
+     <aura:attribute name="PFRD" type="Date" default=""/>
+     <aura:attribute name="CRD" type="Date" default=""/>
      
     <!--- Product family fields -->
     <aura:attribute name="Copy_Product_Family__c" type="string" />
@@ -44,6 +49,8 @@
                       fields="Id,Name,Beds__c,Baths__c,Price__c,Status__c"
                       mode="EDIT" />-->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+     <aura:handler name="oSelectedRecordEvent" event="c:PLM_LT_ChooseObjectRecordEvent" action="{!c.handleCusLukupResComponentEvent}"/>
+    <aura:handler name="getSearchResultStatus" event="c:getSearchResultStatus" action="{!c.handlegetSearchResultStatus}"/>
     <!--<c:PickListValues sObjectName="Property__c" fieldName="Status__c" picklistValues="{!v.picklistValues}" />-->
     <aura:if isTrue="{!v.selectedProposalRecordTypeName}">
     <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open ">
@@ -60,16 +67,16 @@
                     
      
       <div class="slds-col slds-size_1-of-2 "> 
-        <lightning:input type="string" name="ProposalName" label="Proposal Name" value="{!v.tempProposal.Proposal_Name__c}" required="true"/>
+        <lightning:input type="string" name="ProposalName" label="Proposal Name" value="{!v.ProposalName__c}" required="true" />
       </div>
       <div class="slds-col slds-size_1-of-2 slds-p-left_large"> 
-        <lightning:input type="string" name="EditionNumber"   label="Edition Number" />
+        <lightning:input type="string" name="EditionNumber" label="Edition Number" value="{!v.Edition_Prop_Number__c}" />
       </div>
       <div class="slds-col slds-size_1-of-2" >
-        <lightning:input type="Date" name="PFRD" value="{!v.today}" label="PFRD" required="true"/>
+        <lightning:input type="Date" name="DateStarting" label="Start Date" required="true" value="{!v.today}"/>
       </div>
       <div class="slds-col slds-size_1-of-2 slds-p-left_large">
-        <lightning:input type="string" name="Description"   label="Description" />
+        <lightning:input type="string" name="Description" label="Description" value="{!v.Description__c}"/>
       </div>
         
    
@@ -87,9 +94,8 @@
                 <div class="slds-modal__header">
                     <h2 class="slds-text-heading--medium">Select Product Family Group</h2>
             </div>
-            <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap " style="height : 190px">
+            <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap " style="height : 220px">
                 <!--<lightning:radioGroup class="slds-size_1-of-1 slds-p-horizontal_x-small"  name="progress"  value="inProgress" placeholder="Select Progress" options="{! v.options }" onchange="{! c.handleChange }"/>-->
-                
                 <lightning:radioGroup class="slds-size--1-of-1 slds-p-horizontal_x-small" 
                                       name="progress" 
                                       value="inProgress" 
@@ -124,7 +130,7 @@
                     
                       <c:PLM_LT_CustomLookup objectAPIName="PLM_Product_Family__c" IconName="custom:PLM_Product_Family__c" label="Product Family" selectedRecord="{!v.selectedLookUpRecord}"/>
                <!-- sub Header -->
-               
+               <aura:if isTrue='{!v.showProdFamDetSection}'>
 
                     <div class="slds-grid slds-m-top_small slds-truncate" title="Product family details"
                          style='background-color: #e4e3e3;
@@ -154,11 +160,13 @@
                    <lightning:outputField fieldName="Product_Line_Code__c" />
                    <lightning:outputField fieldName="Secondary_Market_Category__c" />
                    <lightning:outputField fieldName="Editor_Name__c" />
-                   
+                   <ui:inputDate aura:id="PFRD" label="PFRD" class="field" value="{!v.PFRD}" displayDatePicker="true"  />  
+                   <ui:inputDate aura:id="CRD" label="CRD" class="field" value="{!v.CRD}" displayDatePicker="true" />  
                </div>
                    </div>
                 </lightning:recordEditForm>
                </div>
+                    </aura:if>
                 </div>
                 
                 <div class="slds-modal__footer">                
@@ -248,7 +256,7 @@
                 
             </div>
         </div>
-    <aura:set attribute="else"> 
+ 	<aura:set attribute="else"> 
         <div aura:id="recordTypeErrorDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-close">
         <div class="slds-modal__container" >
             <div class="slds-modal__header">
@@ -269,6 +277,7 @@
         </div>
     </div>
     </aura:set>
+   
  </aura:if>
     <!--Product Family dilog End-->
     <div aura:id="overlay" class="slds-backdrop slds-backdrop--open"></div>

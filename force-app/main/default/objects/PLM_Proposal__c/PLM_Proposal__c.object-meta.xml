@@ -44,7 +44,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>PLM_Proposal_CMP_Layout</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
@@ -55,7 +55,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <label>Proposal</label>
     <nameField>
         <displayFormat>PR-{0000000}</displayFormat>
@@ -66,6 +65,8 @@
     <searchLayouts>
         <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Product_Family__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Proposal_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Edition_Number__c</lookupDialogsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

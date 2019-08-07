@@ -55,9 +55,45 @@
     <tabs>standard-Feed</tabs>
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
+    <tabs>PLM_Product_Family__c</tabs>
+    <tabs>PLM_Editor__c</tabs>
+    <tabs>PLM_Author__c</tabs>
+    <tabs>PLM_Author_Title__c</tabs>
+    <tabs>PLM_Edition__c</tabs>
+    <tabs>PLM_Proposal__c</tabs>
+    <tabs>PLM_Product_line_Description__c</tabs>
+    <tabs>PLM_Author_Assignment__c</tabs>
+    <tabs>PLM_Associated_Products__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>PLM_Associated_Products__c</tab>
+        </mappings>
+        <mappings>
+            <tab>PLM_Author_Assignment__c</tab>
+        </mappings>
+        <mappings>
+            <tab>PLM_Author_Title__c</tab>
+        </mappings>
+        <mappings>
+            <tab>PLM_Author__c</tab>
+        </mappings>
+        <mappings>
+            <tab>PLM_Edition__c</tab>
+        </mappings>
+        <mappings>
+            <tab>PLM_Editor__c</tab>
+        </mappings>
+        <mappings>
+            <tab>PLM_Product_Family__c</tab>
+        </mappings>
+        <mappings>
+            <tab>PLM_Product_line_Description__c</tab>
+        </mappings>
+        <mappings>
+            <tab>PLM_Proposal__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

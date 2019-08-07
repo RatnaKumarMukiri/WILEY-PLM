@@ -7,7 +7,12 @@
     </applicationVisibilities>
     <applicationVisibilities>
         <application>PLM</application>
-        <default>true</default>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>PLM1</application>
+        <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
@@ -42,7 +47,7 @@
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__LightningSales</application>
-        <default>false</default>
+        <default>true</default>
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
@@ -85,11 +90,11 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>PLM_ProjectOverride</apexClass>
+        <apexClass>PLM_CTRL_SendProjectToWorkFront</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>customLookUpController</apexClass>
+        <apexClass>PLM_ProjectOverride</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
@@ -1275,12 +1280,207 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>PLM_Author__c.Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Attention__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Author_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.BPM_Department_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Bus_Canadian_Post_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Bus_Telephone_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.City__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Deceased_Flag__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Degree_From__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.EMail_Address_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>PLM_Author__c.Editor_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>PLM_Author__c.Email_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Fax_No__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.First_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Government_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_Address_Government_c__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_Address_Province__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_Address_State_code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_Address_Zip_Code_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_Address_Zip_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_Canadian_Post_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_City__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_FAX_no__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Home_Telephone_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Last_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>PLM_Author__c.Location__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Middle_Initial__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.PHD_year__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Prefix__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Primary_Remark__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Province_code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Second_Initial__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Secondary_Remark__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.State_code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Suffix__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Univ_PID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.University_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Zip_code_key_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Author__c.Zip_code_key_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Edition__c.CRD__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1311,6 +1511,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>PLM_Edition__c.Number_Of_Volumes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Edition__c.PFRD__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1355,6 +1560,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>PLM_Product_Family__c.Author__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PLM_Product_Family__c.Business_Line__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>PLM_Product_Family__c.CRD__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1375,6 +1590,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>PLM_Product_Family__c.Editor_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>PLM_Product_Family__c.Global_Subject_Category_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1390,12 +1610,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>PLM_Product_Family__c.Primary_Market_Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>PLM_Product_Family__c.Product_Family_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>PLM_Product_Family__c.Product_Group_Origin_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Product_Family__c.Product_Group_Origin_Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1416,6 +1646,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>PLM_Proposal__c.Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Proposal__c.Edition_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Proposal__c.PFRD__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2108,15 +2348,11 @@
         <layout>PLM_Editor__c-Editor Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>PLM_Product_Family__c-Higher Ed</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>PLM_Product_Family__c-Higher Ed</layout>
-        <recordType>PLM_Product_Family__c.Higher_Education</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>PLM_Product_Family__c-Journal</layout>
         <recordType>PLM_Product_Family__c.Journal</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PLM_Product_Family__c-Project Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>PLM_Product_Family__c-Reference</layout>
@@ -2127,10 +2363,6 @@
         <recordType>PLM_Product_Family__c.Trade</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>PLM_Product_Family__c-WEL</layout>
-        <recordType>PLM_Product_Family__c.Wiley_Efficient_Learning_WEL</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>PLM_Product_line_Description__c-Product line Description Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -2138,7 +2370,7 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>PLM_Proposal__c-Proposal Layout</layout>
-        <recordType>PLM_Proposal__c.Higher_Education</recordType>
+        <recordType>PLM_Proposal__c.Education</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>PLM_Proposal__c-Proposal Layout</layout>
@@ -2150,11 +2382,11 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>PLM_Proposal__c-Proposal Layout</layout>
-        <recordType>PLM_Proposal__c.Trade</recordType>
+        <recordType>PLM_Proposal__c.Test_Prep</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>PLM_Proposal__c-Proposal Layout</layout>
-        <recordType>PLM_Proposal__c.Wiley</recordType>
+        <recordType>PLM_Proposal__c.Trade</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
@@ -2637,7 +2869,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>PLM_Product_Family__c.Higher_Education</recordType>
+        <recordType>PLM_Product_Family__c.Education</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -2653,17 +2885,17 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>PLM_Product_Family__c.Test_Prep</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>PLM_Product_Family__c.Trade</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>PLM_Product_Family__c.Wiley_Efficient_Learning_WEL</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>PLM_Proposal__c.Higher_Education</recordType>
+        <recordType>PLM_Proposal__c.Education</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -2679,12 +2911,12 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>PLM_Proposal__c.Trade</recordType>
+        <recordType>PLM_Proposal__c.Test_Prep</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>PLM_Proposal__c.Wiley</recordType>
+        <recordType>PLM_Proposal__c.Trade</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
@@ -2788,6 +3020,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-Event</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Idea</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -2828,6 +3064,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-QuickText</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Quote</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -2853,6 +3093,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-StreamingChannel</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Task</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -3303,6 +3547,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageRoles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageSandboxes</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

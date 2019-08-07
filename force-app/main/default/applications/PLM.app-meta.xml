@@ -9,14 +9,13 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
-    <label>PLM</label>
+    <label>PLM old</label>
     <navType>Console</navType>
     <tabs>standard-home</tabs>
     <tabs>PLM_Proposal__c</tabs>
     <tabs>PLM_Product_line_Description__c</tabs>
     <tabs>PLM_Author_Assignment__c</tabs>
     <tabs>PLM_Associated_Products__c</tabs>
-    <tabs>PLM_Product_Family__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>PLM_UtilityBar</utilityBar>
     <workspaceConfig>
@@ -25,9 +24,6 @@
         </mappings>
         <mappings>
             <tab>PLM_Author_Assignment__c</tab>
-        </mappings>
-        <mappings>
-            <tab>PLM_Product_Family__c</tab>
         </mappings>
         <mappings>
             <tab>PLM_Product_line_Description__c</tab>

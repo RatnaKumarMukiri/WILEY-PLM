@@ -16,8 +16,8 @@
         </sections>
     </layouts>
     <recordTypes>
-        <label><!-- Higher Education --></label>
-        <name>Higher_Education</name>
+        <label><!-- Education --></label>
+        <name>Education</name>
     </recordTypes>
     <recordTypes>
         <label><!-- Journal --></label>
@@ -28,12 +28,12 @@
         <name>Reference</name>
     </recordTypes>
     <recordTypes>
-        <label><!-- Trade --></label>
-        <name>Trade</name>
+        <label><!-- Test Prep --></label>
+        <name>Test_Prep</name>
     </recordTypes>
     <recordTypes>
-        <label><!-- Wiley Efficient Learning(WEL) --></label>
-        <name>Wiley</name>
+        <label><!-- Trade --></label>
+        <name>Trade</name>
     </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

@@ -52,7 +52,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <label>Associated Products</label>
     <nameField>
         <label>Associated Author Title Name</label>

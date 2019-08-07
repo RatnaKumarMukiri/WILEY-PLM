@@ -17,12 +17,17 @@
               // if storeResponse size is equal 0 ,display No Result Found... message on screen.                }
                 if (storeResponse.length == 0) {
                     component.set("v.Message", 'No Result Found...');
-                     this.clearInputVal(component,event,helper);
+                     
+                    // this.clearInputVal(component,event,helper);
+                    var compEvent = component.getEvent("getSearchResultStatus");  
+                    compEvent.setParams({"searchReslustStatus" : false});  
+    				compEvent.fire();
                 } else {
                     component.set("v.Message", '');
                 }
                 // set searchResult list with return value from server.
                 component.set("v.listOfSearchRecords", storeResponse);
+                
             }
  
         });

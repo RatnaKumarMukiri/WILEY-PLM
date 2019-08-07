@@ -21,14 +21,6 @@
         <settingValue>false</settingValue>
     </preferences>
     <preferences>
-        <settingName>PRMAccRelPref</settingName>
-        <settingValue>false</settingValue>
-    </preferences>
-    <preferences>
-        <settingName>ChannelAccountHierarchyPref</settingName>
-        <settingValue>false</settingValue>
-    </preferences>
-    <preferences>
         <settingName>ActivityAnalyticsEnabled</settingName>
         <settingValue>false</settingValue>
     </preferences>
@@ -74,7 +66,7 @@
     </preferences>
     <preferences>
         <settingName>NetworksEnabled</settingName>
-        <settingValue>true</settingValue>
+        <settingValue>false</settingValue>
     </preferences>
     <preferences>
         <settingName>NotesReservedPref01</settingName>

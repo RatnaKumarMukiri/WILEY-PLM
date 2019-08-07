@@ -45,7 +45,7 @@
         <type>Flexipage</type>
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>PLM_Edition_Compact_layout</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
@@ -56,7 +56,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <label>Edition</label>
     <nameField>
         <displayFormat>ED-{0000000}</displayFormat>
@@ -67,10 +66,13 @@
     <pluralLabel>Editions</pluralLabel>
     <searchLayouts>
         <lookupDialogsAdditionalFields>Edition_Number__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Global_Subject_Category_Code__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Number_Of_Volumes__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Editor_Code__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Edition_Number1__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Proposal__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Family_Name__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Edition_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Edition_Number1__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Proposal__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Product_Family_Name__c</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>Number_Of_Volumes__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Product_Family_Name__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Secondary_Market_Category__c</searchResultsAdditionalFields>

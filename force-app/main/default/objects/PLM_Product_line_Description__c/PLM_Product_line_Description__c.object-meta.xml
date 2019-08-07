@@ -52,13 +52,12 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
-    <label>Product line Description</label>
+    <label>Product line</label>
     <nameField>
-        <label>Product line Description Name</label>
+        <label>Product line</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Product Line Descriptions</pluralLabel>
+    <pluralLabel>Product Lines</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

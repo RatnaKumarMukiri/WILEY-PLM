@@ -14,8 +14,9 @@
                   </span>
               </span>    
               <span class="slds-media__body">  
-                  <span class="slds-listbox__option-text slds-listbox__option-text_entity">{!v.oRecord.Name}</span>
-              </span>
+                  <span class="slds-listbox__option-text slds-listbox__option-text_entity">{!v.oRecord.Name} - {!v.oRecord.Full_Title__c} </span>
+              	 
+            </span>
         </span>
     </li>
 </aura:component>

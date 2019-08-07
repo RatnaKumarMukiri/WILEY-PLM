@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Trade</fullName>
     <active>true</active>
+    <compactLayoutAssignment>PLM_Product_Family_CMP_Layout</compactLayoutAssignment>
     <label>Trade</label>
     <picklistValues>
         <picklist>Global_Subject_Category_Description__c</picklist>

@@ -50,22 +50,24 @@
             <div class="slds-p-left_large">
                 <div class="slds-form-element">
                       <div class="slds-form-element__control">
-                        <table>
-                            <td>
+                          <table>
+                              <td>
                         <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-50" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-50">
                             <span class="slds-checkbox_faux"></span>
                             <span class="slds-form-element__label">Dual Edition</span>
                           </label>
-                        </div>
-                          <div class="slds-checkbox">
+                         </div>
+                            <div class="ChkBoxspace"/>
+                         <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-51" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-51">
                             <span class="slds-checkbox_faux"></span>
                             <span class="slds-form-element__label">Cloth</span>
                           </label>
                         </div>
+                            <div class="ChkBoxspace"/>
                           <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-52" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-52">
@@ -73,6 +75,7 @@
                             <span class="slds-form-element__label">Paper</span>
                           </label>
                         </div>
+                            <div class="ChkBoxspace"/>
                           <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-53" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-53">
@@ -80,6 +83,7 @@
                             <span class="slds-form-element__label">eBook(ePDF)</span>
                           </label>
                         </div>
+                            <div class="ChkBoxspace"/>
                           <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-54" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-54">
@@ -87,8 +91,9 @@
                             <span class="slds-form-element__label">eBook(eMobi)</span>
                           </label>
                         </div>
-                         </td>
-                            <td>
+                              </td>
+                              <td>
+                            <div class="ChkBoxspace"/>
                           <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-55" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-55">
@@ -96,6 +101,8 @@
                             <span class="slds-form-element__label">eBook(ePub)</span>
                           </label>
                         </div>
+                          <div class="ChkBoxspace"/>
+                          
                           <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-56" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-56">
@@ -103,6 +110,7 @@
                             <span class="slds-form-element__label">eBook WDL(PDF)</span>
                           </label>
                         </div>
+                          <div class="ChkBoxspace"/>
                           <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-57" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-57">
@@ -110,20 +118,23 @@
                             <span class="slds-form-element__label">eBook BRD(XML)</span>
                           </label>
                         </div>
+                          <div class="ChkBoxspace"/>
                           <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-58" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-58">
                             <span class="slds-checkbox_faux"></span>
                             <span class="slds-form-element__label">EText(Vital Source PDF)</span>
                           </label>
-                        </div><div class="slds-checkbox">
+                        </div>
+                           <div class="ChkBoxspace"/>
+                          <div class="slds-checkbox">
                           <input type="checkbox" name="options" id="checkbox-59" value="checkbox-50" checked="" />
                           <label class="slds-checkbox__label" for="checkbox-59">
                             <span class="slds-checkbox_faux"></span>
                             <span class="slds-form-element__label">EText(Vital Source XML)</span>
                           </label>
                         </div>
-                           </td>
+                              </td>
                           </table>
                           <br/><br/>
                           

@@ -1,16 +1,15 @@
 /**********************************************************************
-Name: PLM_ProjectOverride()
+Name: PLM_ProjectOverride
 Copyright © 2015 Salesforce
-======================================================
-======================================================
-@Purpose: Linked to Proposal Screen component PLM_COMP_ProjectOverride.
-======================================================
-======================================================
+-------
 History 
 ------- 
 VERSION   AUTHOR                  DATE        DETAIL Description
 1.0       Name : Abilash Patha   30/07/2019   INITIAL DEVELOPMENT CSR: 
 ***********************************************************************/
+/**
+      * @Description: Class used to create and update Product Family and Proposal Data
+**/
 public With Sharing class PLM_ProjectOverride {
    public static List<RecordType> propRecTypeList;
    public static String recPropName;
@@ -18,12 +17,14 @@ public With Sharing class PLM_ProjectOverride {
    public static List<RecordType> prodFamRecTypeList;
    public static PLM_Product_Family__c prodFamilyNewRec;
    public static PLM_Proposal__c propRecordCre;
+   public static PLM_Temporary_Proposal__c tempProp;
+   public static string proposalRecordTypeName;
 	
     /**
-     * @Purpose: To get the record type Id of Product Family. 
-     * @Returns: Product Family record type Id.
-     * @Parameters:  Record type id of Proposal selected in the first screen in the Component. 
-     */
+      * @Description: Retrive RecordType Name of Product Family based on Proposal RecordType.
+      * @Params		: recId			 	- RecordType ID from New Action of Proposal Screen
+      * @return		: finRecId			- Return the name of the Product Family RecordType
+      */
     @auraEnabled
     public static Id recordTypeByName(Id recId){
         propRecTypeList = new List<RecordType>();
@@ -50,6 +51,13 @@ public With Sharing class PLM_ProjectOverride {
             return null;
         }
     }
+    
+    /**
+      * @Description: Retrive RecordType Name of Selected Proposal RecordType.
+      * @Params		: recId			 	- RecordType ID from New Action of Proposal Screen
+      * @return		: propRecTypeList	- Return the name of the Selected Proposal RecordType
+      */
+    
     @auraEnabled
     public static String recordTypeByNameForProposal(Id recId){
         propRecTypeList = new List<RecordType>();
@@ -68,25 +76,34 @@ public With Sharing class PLM_ProjectOverride {
             return null;
         }
     }
+    
+    /**
+      * @Description: Create Edition records and associate to it's Product Family.
+      * @Params		: productFamily 	- With the search text
+      *            	  edititonNumber 	- Edition Number from Proposal Screen
+      * 			  crdDate 			- crdDate from Proposal Screen
+      * 			  pfrdDate 			- pfrdDate from Proposal Screen
+      * @return		: message 			- Status of the record creation or failure
+      */
     @auraEnabled
-    public static string CreateEdition(PLM_Product_Family__c productFamily,Integer edititonNumber){
+    public static string createEdition(PLM_Product_Family__c productFamily,Integer edititonNumber,Date crdDate,Date pfrdDate){
         string message = '';
         system.debug('productFamily Edit Number::'+productFamily.Edition_Number__c);
-        system.debug(' Edition Number::'+edititonNumber);
+        system.debug('Edition Number::'+edititonNumber);
         try{
-            
             if(productFamily != Null)
             {
                 update productFamily;
-                system.debug('Product family ');
+
                 PLM_Edition__c newedition = new PLM_Edition__c();
                 newedition.Proposal__c = productFamily.Id;
                 newEdition.Edition_Number1__c = edititonNumber;
+                newEdition.CRD__c= crdDate;
+                newEdition.PFRD__c = pfrdDate;
                 insert newEdition;
-                 message= newEdition.id;
+                message= newEdition.id;
             }
-            
-            }
+        }
         catch(exception e)
         {
             message= 'Edition Record Creation Failed';
@@ -95,59 +112,32 @@ public With Sharing class PLM_ProjectOverride {
         return message;
     }
     
+     
      /**
-     * @Purpose: To create Product Family & Proposal. 
-     * @Returns: Product Family record type Id.
-     * @Parameters: All the values of Product family. 
-     */
+      * @Description: Create Proposal records on Temp Object
+      * @Params		: edititonNumber 	-  Edition Number from Proposal Screen
+      *            	  proposalName		-  Name of the Proposal
+      * 			  description 		-  Description from Proposal
+      * 			  pFRD	 			-  pFRD from Proposal Screen
+      * 			  strRecordTypeId	-  RecordType of New Proposal Creation
+      * @return		: recPropId			-  Passing ProductFamily RecordType using Proposal RecordType
+      */
     @auraEnabled 
-    public static string createProductFamily(String cProdFam,string editNum,string fullTitle,string globalSubCatDescr,
-                                             string primaryMktCat, string prodFamShrtTitle, string nameOfProd, 
-                                             string editCode, string globSubCatCode, string numbOfVol, string prodFamName, 
-                                             string prodLineCode, string secondMarCat, string editorName, string ProposalName,string Description){
-        string message = '';
-           system.debug('@#@#@#@#@#'+fullTitle);
+    public static string proposalInsert(Integer editionNumber, string proposalName,string description,string pFRD,string strRecordTypeId){
         try{
-           	prodFamilyNewRec = new PLM_Product_Family__c();
-            prodFamilyNewRec.Copy_Product_Family__c = cProdFam;
-            //prodFamilyNewRec.Edition_Number__c = editNum;
-            prodFamilyNewRec.Full_Title__c = fullTitle;
-            prodFamilyNewRec.Global_Subject_Category_Description__c = globalSubCatDescr;
-            prodFamilyNewRec.Primary_Market_Category__c = primaryMktCat;
-            prodFamilyNewRec.Product_Family_Short_Title__c = prodFamShrtTitle;
-            //prodFamilyNewRec.Product_line_Description__c =  prodLineDescr;
-            //prodFamilyNewRec.Name
-            prodFamilyNewRec.Editor_Code__c = editCode;
-            prodFamilyNewRec.Global_Subject_Category_Code__c = globSubCatCode;
-            //prodFamilyNewRec.Number_Of_Volumes__c = numbOfVol;
-            prodFamilyNewRec.Product_Family_Name__c = prodFamName;
-            prodFamilyNewRec.Product_Line_Code__c = prodLineCode;
-            prodFamilyNewRec.Secondary_Market_Category__c = secondMarCat;
-            prodFamilyNewRec.Editor_Name__c = editorName;
-            system.debug('#############0'+Description);
-            insert prodFamilyNewRec;
-  			system.debug('#############'+ProposalName);
-            propRecordCre = new PLM_Proposal__c();
-            propRecordCre.Proposal_Name__c = ProposalName;
-            propRecordCre.Product_Family__c = prodFamilyNewRec.ID;
-            propRecordCre.Description__c = Description;
-            insert propRecordCre;
-            system.debug('#$#$#$'+propRecordCre.Id);
-            message= propRecordCre.Id;
-            }
-        catch(exception e)
-        {
-            	system.debug('@#@#@#@#@#'+e.getMessage());
-			 message= 'Product Family Record Creation Failed';
+            string recPropId = recordTypeByName(strRecordTypeId);
+            proposalRecordTypeName = Schema.getGlobalDescribe().get('PLM_Proposal__c').getDescribe().getRecordTypeInfosById().get(strRecordTypeId).getName();
+            tempProp = new PLM_Temporary_Proposal__c();
+            tempProp.Description__c = description;
+            tempProp.Edition_Number__c = editionNumber;
+            tempProp.Proposal_Name__c = proposalName;
+            //tempProp.PFRD__c = Date.valueOf(pFRD);
+            insert tempProp;
+            system.debug('@#@#@#@#@#@#recPropId'+recPropId);
+            return recPropId;
+        }catch(exception e){
+            system.debug('In Exception proposalInsert '+e.getMessage()+ ' Line '+e.getLineNumber());
+            return e.getMessage();
         }
-        
-        return message;
-    }
-    
-     @auraEnabled
-    public static Temp_Proposal__c setTempProposal(Temp_Proposal__c tempProposal){
-       tempProposal.Name=userInfo.getUserName();
-       Database.insert(tempProposal);
-       return tempProposal;
-    }
+    } 
 }

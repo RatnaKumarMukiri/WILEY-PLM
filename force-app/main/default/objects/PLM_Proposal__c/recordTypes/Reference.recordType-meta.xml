@@ -2,5 +2,6 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Reference</fullName>
     <active>true</active>
+    <compactLayoutAssignment>PLM_Proposal_CMP_Layout</compactLayoutAssignment>
     <label>Reference</label>
 </RecordType>
