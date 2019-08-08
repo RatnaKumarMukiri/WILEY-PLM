@@ -20,8 +20,12 @@ public without sharing class PLM_CTRL_SendProjectToWorkFront {
      */
     @InvocableMethod(label='SendProjectToWorkFront')
     public static List<String> sendProjectToWorkFront(List<String> lstInputParams) {
-        calloutProcess(lstInputParams);
-        return null;
+        try{
+        	calloutProcess(lstInputParams);
+        }catch(exception e){
+            
+        }
+            return null;
     }
     
      /**
@@ -32,7 +36,7 @@ public without sharing class PLM_CTRL_SendProjectToWorkFront {
     @future(callout=true)
     public static void calloutProcess(List<String> lstInputParams){
        //System.debug('***** ' + lstInputParams);
-        
+        try{
         //Get Proposal Details
         PLM_Proposal__c objProp = [select id, name,Proposal_Name__c from PLM_Proposal__c where id=:lstInputParams[0]];
         PLM_WorkFront_Details__c objWFDetails = PLM_WorkFront_Details__c.getValues('Work Front Project');
@@ -51,6 +55,9 @@ public without sharing class PLM_CTRL_SendProjectToWorkFront {
         request.setMethod('POST');
         HttpResponse response = http.send(request);
         //System.debug('***** ' + response.getStatusCode() + ' *** ' + response.getBody());
+        }catch(exception e){
+            
+        }
 
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>CreateProducts</members>
+        <members>PLM_CreateProducts</members>
         <members>PLM_CTRL_SendProjectToWorkFront</members>
         <members>PLM_CustomLookUpController</members>
         <members>PLM_ProjectOverride</members>

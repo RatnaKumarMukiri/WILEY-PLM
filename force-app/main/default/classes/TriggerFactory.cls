@@ -58,14 +58,17 @@ public with sharing class TriggerFactory
     private static ITriggerDispatcher getTriggerDispatcher(Schema.sObjectType soType)
     {
         String originalTypeName = soType.getDescribe().getName();
-        String dispatcherTypeName = null;
-        if (originalTypeName.toLowerCase().endsWith('__c')) {
-            Integer index = originalTypeName.toLowerCase().indexOf('__c');
-            dispatcherTypeName = originalTypeName.substring(0, index) + 'TriggerDispatcher';
+        String dispatcherTypeName;
+        TriggerNameAbbreviations__c abbr = TriggerNameAbbreviations__c.getInstance(originalTypeName);
+        //System.debug(‘### getTriggerDispatcher().abbr ‘ + abbr);
+        if (abbr != NULL) {
+        dispatcherTypeName = abbr.Abbreviation__c+'TriggerDispatcher';
+        } else if (originalTypeName.toLowerCase().endsWith('__c')) {
+        Integer index = originalTypeName.toLowerCase().indexOf('__c');
+        dispatcherTypeName = originalTypeName.substring(0, index).replace('__', '') +'TriggerDispatcher';
+        } else {
+        dispatcherTypeName = originalTypeName +'TriggerDispatcher';
         }
-        else
-            dispatcherTypeName = originalTypeName + 'TriggerDispatcher';
-
         Type obType = Type.forName(dispatcherTypeName);
         ITriggerDispatcher dispatcher = (obType == null) ? null : (ITriggerDispatcher)obType.newInstance();
         return dispatcher;
