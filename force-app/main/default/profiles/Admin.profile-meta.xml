@@ -86,10 +86,6 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>CreateProducts</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>PLM_CTRL_SendProjectToWorkFront</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1665,6 +1661,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>PLM_Product_Family__c.Product_Line_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PLM_Product_Family__c.Product_line_Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

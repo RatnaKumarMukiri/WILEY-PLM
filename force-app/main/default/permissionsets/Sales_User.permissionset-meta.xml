@@ -1537,6 +1537,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>PLM_Product_Family__c.Product_line_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>PLM_Product_Family__c.Secondary_Market_Category__c</field>
         <readable>false</readable>
     </fieldPermissions>

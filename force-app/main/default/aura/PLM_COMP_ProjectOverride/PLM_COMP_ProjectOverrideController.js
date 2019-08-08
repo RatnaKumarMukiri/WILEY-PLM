@@ -8,13 +8,12 @@
         //cmp.set('v.today', today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate());
         
         var recordTypeId = cmp.get("v.pageReference").state.recordTypeId;
-        //alert('recordTypeId-----------------'+recordTypeId);
+
         var action = cmp.get("c.recordTypeByNameForProposal");
 		action.setParams({ "recId" : recordTypeId });
 		action.setCallback(this, function(response) {
 			var state = response.getState();
-            //alert('state----------------'+state);
-            //alert('res---------------------'+response.getReturnValue()); 
+
             if (state === 'SUCCESS') {
                 if(response.getReturnValue() =='Reference'){
                     cmp.set("v.selectedProposalRecordTypeName",true); 

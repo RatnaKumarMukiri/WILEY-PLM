@@ -49,7 +49,7 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>Product_line_Description__c</field>
             </layoutItems>
             <layoutItems>

@@ -25,7 +25,7 @@ public With Sharing class PLM_ProjectOverride {
     @auraEnabled
     public static String recordTypeByNameForProposal(Id recId){
         try{
-            return Schema.getGlobalDescribe().get('PLM_Proposal__c').getDescribe().getRecordTypeInfosById().get(recId).getName();
+            return getRecordTypeInfoBySchema(recId, null, 'PLM_Proposal__c');
         }catch(exception e){
             system.debug('Exception occured in recordTypeByNameForProposal method at Line '+ e.getLineNumber() +' Error Message '+e.getMessage());
             return null;
@@ -46,7 +46,7 @@ public With Sharing class PLM_ProjectOverride {
         system.debug('productFamily Edit Number::'+productFamily.Edition_Number__c);
         system.debug('Edition Number::'+edititonNumber);
         try{
-            if(productFamily != Null)
+            if(productFamily != null)
             {
                 update productFamily;
 
@@ -80,20 +80,39 @@ public With Sharing class PLM_ProjectOverride {
     public static String proposalInsert(Integer editionNumber, string proposalName,string description,string pFRD,string strRecordTypeId){
         try{
 
-            proposalRecordTypeName = Schema.getGlobalDescribe().get('PLM_Proposal__c').getDescribe().getRecordTypeInfosById().get(strRecordTypeId).getName();
-            productFamilyRecordTypeName = Schema.getGlobalDescribe().get('PLM_Product_Family__c').getDescribe().getRecordTypeInfosByName().get(proposalRecordTypeName).getRecordTypeId();
+            proposalRecordTypeName 		= getRecordTypeInfoBySchema(strRecordTypeId, null, 'PLM_Proposal__c');
+            productFamilyRecordTypeName = getRecordTypeInfoBySchema(null, proposalRecordTypeName, 'PLM_Product_Family__c');
+            
             tempProp = new PLM_Temporary_Proposal__c();
             tempProp.Description__c = description;
             tempProp.Edition_Number__c = editionNumber;
             tempProp.Proposal_Name__c = proposalName;
             //tempProp.PFRD__c = Date.valueOf(pFRD);
-            
-            insert tempProp;
 
+            insert tempProp;
             return productFamilyRecordTypeName;
         }catch(exception e){
             system.debug('In Exception proposalInsert '+e.getMessage()+ ' Line '+e.getLineNumber());
             return e.getMessage();
         }
-    } 
+    }
+    
+    /**
+      * @Description: Retrive RecordType Name OR ID Based on ObjectAPI.
+      * @Params		: recId			- RecordType ID 
+      * 			  recName		- RecordType Name 
+      * 			  objectAPI		- objectAPI to determine Which Object
+      * @return		: recNameOrId	- Return the name of the Selected Proposal RecordType
+      */
+    @auraEnabled
+    public static String getRecordTypeInfoBySchema(String recId, String recName, String objectAPI){
+        if(!String.isEmpty(RecId) && String.isEmpty(RecName) && !String.isEmpty(objectAPI)){
+            return Schema.getGlobalDescribe().get(objectAPI).getDescribe().getRecordTypeInfosById().get(recId).getName();
+        }else if(String.isEmpty(RecId) && String.isEmpty(RecName) && !String.isEmpty(objectAPI)){
+            return Schema.getGlobalDescribe().get(objectAPI).getDescribe().getRecordTypeInfosByName().get(recName).getRecordTypeId();
+        }else{
+            return null;
+        }
+    }
+
 }
