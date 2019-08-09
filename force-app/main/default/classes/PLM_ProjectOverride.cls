@@ -77,7 +77,7 @@ public With Sharing class PLM_ProjectOverride {
       * @return		: productFamilyRecordTypeName			-  Passing ProductFamily RecordType using Proposal RecordType
       */
     @auraEnabled 
-    public static String proposalInsert(Integer editionNumber, string proposalName,string description,string pFRD,string strRecordTypeId){
+    public static String proposalInsert(Integer editionNumber, string proposalName,string description,Date pFRD,ID strRecordTypeId){
         try{
 
             proposalRecordTypeName 		= getRecordTypeInfoBySchema(strRecordTypeId, null, 'PLM_Proposal__c');
@@ -108,7 +108,7 @@ public With Sharing class PLM_ProjectOverride {
     public static String getRecordTypeInfoBySchema(String recId, String recName, String objectAPI){
         if(!String.isEmpty(RecId) && String.isEmpty(RecName) && !String.isEmpty(objectAPI)){
             return Schema.getGlobalDescribe().get(objectAPI).getDescribe().getRecordTypeInfosById().get(recId).getName();
-        }else if(String.isEmpty(RecId) && String.isEmpty(RecName) && !String.isEmpty(objectAPI)){
+        }else if(String.isEmpty(RecId) && !String.isEmpty(RecName) && !String.isEmpty(objectAPI)){
             return Schema.getGlobalDescribe().get(objectAPI).getDescribe().getRecordTypeInfosByName().get(recName).getRecordTypeId();
         }else{
             return null;

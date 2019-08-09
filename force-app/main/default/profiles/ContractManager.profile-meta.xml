@@ -90,6 +90,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>PLM_CreateProducts</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>PLM_CustomLookUpController</apexClass>
         <enabled>false</enabled>
     </classAccesses>

@@ -70,10 +70,10 @@
         <members>User.User_Layout</members>
         <name>CompactLayout</name>
     </types>
-    <types>
+   <!-- <types>
         <members>CPQIntegrationUserApp</members>
         <name>ConnectedApp</name>
-    </types>
+    </types>-->
     <types>
         <members>Wiley_Logo_White</members>
         <members>Wiley_Logo_White1</members>
@@ -350,7 +350,7 @@
         <members>PLM_Proposal__c</members>
         <name>CustomTab</name>
     </types>
-    <types>
+   <!-- <types>
         <members>Sales_and_Marketing_Dashboards</members>
         <members>Sales_and_Marketing_Dashboards/AdoptionDashboard</members>
         <members>Sales_and_Marketing_Dashboards/Best_Practice_Leads_Dashboard</members>
@@ -360,7 +360,7 @@
         <members>Service_Dashboards/Service_Exec_Overview</members>
         <members>Service_Dashboards/Service_KPIs</members>
         <name>Dashboard</name>
-    </types>
+    </types>-->
     <types>
         <members>SalesTools</members>
         <members>SharedDocuments</members>
@@ -378,7 +378,7 @@
         <members>EmailToSalesforce</members>
         <name>EmailServicesFunction</name>
     </types>
-    <types>
+   <!-- <types>
         <members>unfiled$public</members>
         <members>unfiled$public/ContactFollowUpSAMPLE</members>
         <members>unfiled$public/LeadsNewassignmentnotificationSAMPLE</members>
@@ -406,7 +406,7 @@
         <members>unfiled$public/Sample_Reconnecting</members>
         <members>unfiled$public/Sample_ScheduleMeeting</members>
         <name>EmailTemplate</name>
-    </types>
+    </types> -->
     <types>
         <members>Case</members>
         <name>EscalationRules</name>
