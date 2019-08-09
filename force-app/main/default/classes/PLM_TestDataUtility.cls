@@ -33,7 +33,7 @@ public class PLM_TestDataUtility {
        testProposal.Edition_Number__c = 1234;
        testProposal.Description__c = 'Prop Descr';
          
-       insert testProposal;
+       system.debug('Hello');
        return testProposal;
     }
     public static PLM_Author__c createAuthor(){
