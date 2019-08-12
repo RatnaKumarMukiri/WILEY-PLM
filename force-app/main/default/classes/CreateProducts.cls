@@ -23,7 +23,7 @@ public class CreateProducts {
         } 
          return JSON.serialize(lstRet) ;
     }
-    
+    /* Result wrapper class */
     public class ResultWrapper{
         public String objName {get;set;}
         public String text{get;set;}
