@@ -133,7 +133,8 @@
                <aura:if isTrue='{!v.showProdFamDetSection}'>
 
                     <div class="slds-grid slds-m-top_small slds-truncate" title="Product family details"
-                         style='background-color: #e4e3e3;
+                         style='background-color: #1c5c64;
+                                color : #FFFFFF;
                                 border-top-right-radius: 5px;
     border-top-left-radius: 5px;'><span class='slds-p-vertical_xxx-small slds-p-left_xx-small'>Product family details</span></div>
 
