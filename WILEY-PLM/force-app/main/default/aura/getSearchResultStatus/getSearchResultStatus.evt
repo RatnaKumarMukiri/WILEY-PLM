@@ -1,0 +1,5 @@
+<!-- Regestered in PLM_LT_CustomLookup and handled in PLM_COMP_projectOverride.cmp -->
+<aura:event type="COMPONENT" description="Event template">
+
+  <aura:attribute name="searchReslustStatus" type="boolean" default='false'/>
+</aura:event>

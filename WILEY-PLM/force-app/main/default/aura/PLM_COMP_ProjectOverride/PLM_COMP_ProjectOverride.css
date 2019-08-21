@@ -1,0 +1,10 @@
+.THIS .myCustomClass input { 
+    text-align: right;
+}
+.THIS .prodfamDetClass .slds-form{
+    border-left: 1px solid #e4e3e3;
+    border-right: 1px solid #e4e3e3;
+    border-bottom: 1px solid #e4e3e3;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

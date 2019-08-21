@@ -1,0 +1,63 @@
+.THIS .leftPaddingClass {
+    padding-left: 2rem;
+}
+ 
+.THIS .pillSize{
+ width:60%;
+}
+.THIS .uiInput--input .input, .THIS .uiInput--input.input{
+   /* width:62%;*/
+}
+.THIS .slds-dropdown{
+left:25%;
+}
+.THIS .slds-icon-utility-search{
+    margin-right: 0px;
+    /*position: absolute;
+    right: 243px;*/
+}
+.THIS .slds-lookup__menu{
+    /*width:62%*/
+}
+.THIS .iconPositn{
+padding-bottom: 22px;
+    padding-left: 1px;
+}
+
+.THIS .slds-pill-container{
+   /* padding-top:0px;   
+    padding-right:1rem;
+    padding-bottom:0px;
+    padding-left:0.75rem;*/
+}
+.THIS .forceStyle .required{
+    color:rgb(22, 50, 92);
+}
+.THIS ul  {
+   max-height: 200px;
+      overflow-y: scroll;
+}
+/* Custom Scroll bar */
+.THIS #style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.THIS #style-1::-webkit-scrollbar
+{
+	width: 5px;
+    
+	background-color: #F5F5F5;
+}
+
+.THIS #style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	 -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.THIS .slds-form-element__control
+{
+   /* padding-bottom:16px;*/
+}

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trade</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>PLM_Product_Family_CMP_Layout</compactLayoutAssignment>
+    <label>Trade</label>
+    <picklistValues>
+        <picklist>Global_Subject_Category_Description__c</picklist>
+        <values>
+            <fullName>GE Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Applied Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Engg %26 Computer Sci</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Math and Statistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Microsoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Social Sciences%2FCulinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Applied Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Engineering %26 Computer Sci</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Math %26 Statistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Microsoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HE Social Sciences%2FCulinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Architecture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Architecture%2FCulinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STMS Allocated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STMS Health Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STMS Life Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STMS Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STMS Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STMS Physical Sciences %26 Engg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STMS Social Sci %26 Humanities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STMS Social Sciences %26 Humanit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undefined</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Market_Category__c</picklist>
+        <values>
+            <fullName>Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Textbook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Group_Origin_Description__c</picklist>
+        <values>
+            <fullName>Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Market_Category__c</picklist>
+        <values>
+            <fullName>Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Textbook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

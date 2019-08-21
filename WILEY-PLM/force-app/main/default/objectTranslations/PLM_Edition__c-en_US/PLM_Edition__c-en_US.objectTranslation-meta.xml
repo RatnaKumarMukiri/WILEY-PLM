@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Edition</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Editions</value>
+    </caseValues>
+    <layouts>
+        <layout>Edition Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Product Family --></label>
+            <section>Product Family</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add Products --></label>
+        <name>Add_Products</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

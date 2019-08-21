@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_Description__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Location Description</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Germany product</fullName>
+                <default>true</default>
+                <label>Germany product</label>
+            </value>
+            <value>
+                <fullName>Australia Product</fullName>
+                <default>false</default>
+                <label>Australia Product</label>
+            </value>
+            <value>
+                <fullName>U.K. Product</fullName>
+                <default>false</default>
+                <label>U.K. Product</label>
+            </value>
+            <value>
+                <fullName>Asia Product</fullName>
+                <default>false</default>
+                <label>Asia Product</label>
+            </value>
+            <value>
+                <fullName>Canada Product</fullName>
+                <default>false</default>
+                <label>Canada Product</label>
+            </value>
+            <value>
+                <fullName>U.S.  Product</fullName>
+                <default>false</default>
+                <label>U.S.  Product</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

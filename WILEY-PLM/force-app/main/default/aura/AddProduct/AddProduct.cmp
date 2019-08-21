@@ -1,0 +1,168 @@
+<aura:component implements="force:lightningQuickActionwithoutheader,forceCommunity:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="gridColumns" type="List" access="PRIVATE" />
+    <aura:attribute name="gridData" type="Object" access="PRIVATE" />
+    <aura:attribute name="gridExpandedRows" type="List" access="PRIVATE" />
+    <aura:attribute name="gridDataLength" type="Integer" access="PRIVATE" />
+    <aura:attribute name="addExtProducts" type="Integer" access="PRIVATE" default="0"/>
+    <aura:attribute name="recordId" type="String" />
+	<aura:attribute name="selItem" type="object"  access="public" />
+    <aura:attribute name="selItem2" type="object"  access="public" /> 
+    <aura:attribute name="fields" type="String[]" default="['Name','Product_Code__c','OwnerId']" />
+	<aura:attribute name="associatedProds" type="PLM_Associated_Products__c[]"/> 
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="AddRowEvt" event="c:AddNewRowEvt" action="{!c.addNewRow}"/>
+    
+    <!-- Add Footer Information -->
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h1 class="title slds-text-heading--medium" ><b><lightning:icon size="small"/>Add Products</b></h1>
+    </div>
+    <br/>
+    <aura:html tag="style">
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }
+        .slds-modal__content{
+        overflow-y:auto !important;
+        height:unset !important;
+        max-height:unset !important;
+		}        
+	</aura:html>
+    
+    <div class="slds-align_absolute-center">
+    	<lightning:button aura:id = "existingProduct" variant="brand" label="Add Existing Products" title="Add Existing Products" onclick="{!c.addExistingProducts}" />
+        <lightning:button aura:id = "addNewProduct" variant="brand" label="Create New Products" title="Add New Products" onclick="{!c.addNewProducts}" />
+    </div><br/>
+	<aura:if isTrue="{!v.gridDataLength > 0}">
+        <div>
+            <!--<lightning:treeGrid
+                columns="{! v.gridColumns }"
+                data="{! v.gridData }"
+                expandedRows="{! v.gridExpandedRows }"
+                keyField="name"
+            />-->
+            
+            <div class="slds-p-left_large">
+                <div class="slds-form-element">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-50" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-50">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Dual Edition</span>
+                          </label>
+                        </div>
+                          <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-51" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-51">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Cloth</span>
+                          </label>
+                        </div>
+                          <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-52" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-52">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Paper</span>
+                          </label>
+                        </div>
+                          <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-53" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-53">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">eBook(ePDF)</span>
+                          </label>
+                        </div>
+                          <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-54" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-54">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">eBook(eMobi)</span>
+                          </label>
+                        </div>
+                          <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-55" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-55">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">eBook(ePub)</span>
+                          </label>
+                        </div>
+                          <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-56" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-56">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">eBook WDL(PDF)</span>
+                          </label>
+                        </div>
+                          <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-57" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-57">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">eBook BRD(XML)</span>
+                          </label>
+                        </div>
+                          <div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-58" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-58">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">EText(Vital Source PDF)</span>
+                          </label>
+                        </div><div class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-59" value="checkbox-50" checked="" />
+                          <label class="slds-checkbox__label" for="checkbox-59">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">EText(Vital Source XML)</span>
+                          </label>
+                        </div>
+                          <br/><br/>
+                          
+                          
+                      </div>
+                    </div>
+               </div> 
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+        <lightning:button variant="Brand" class="slds-button" label="Create Products" onclick="{!c.handleSubmit}"/>
+        <lightning:button variant="Neutral" class="slds-button" label="Cancel" onclick="{!c.handleClose}"/>
+    	</div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.gridDataLength == 0}">
+        <lightning:recordForm 
+                          recordId="{!v.recordId}" 
+                          objectApiName="Account"
+                          mode="readonly"
+                          columns="3"
+                          fields="{!v.fields}" />
+        <br />
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <div class="slds-truncate">S.No</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Associated Product">Associated Product</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Action">Action</div>
+                    </th>
+                </tr>
+            </thead>   
+            <tbody>
+            	<aura:iteration items="{!v.associatedProds}" var="acc" indexVar="index">
+                	<c:dynamicRowItem ContactInstance="{!item}" rowIndex="{!index}" />
+            	</aura:iteration>
+           	</tbody>
+        </table>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+        <lightning:button variant="Brand" class="slds-button" label="Create Products" onclick="{!c.handleSubmit}"/>
+        <lightning:button variant="Neutral" class="slds-button" label="Cancel" onclick="{!c.handleClose}"/>
+    	</div>
+    </aura:if>   
+</aura:component>

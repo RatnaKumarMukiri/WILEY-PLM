@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PLM_Proposal_CMP_Layout</fullName>
+    <fields>Name</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Proposal_Name__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Edition_Number__c</fields>
+    <label>PLM Proposal CMP Layout</label>
+</CompactLayout>
