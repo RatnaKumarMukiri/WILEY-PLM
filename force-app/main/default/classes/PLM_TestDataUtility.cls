@@ -119,7 +119,7 @@ public class PLM_TestDataUtility {
 }
 /**********************************************************************
 ======================================================
-History 
+History Checking Locks service
 ------- 
 VERSION   AUTHOR                  			DATE        DETAIL Description
 1.0       Name : Offshore Team           08/08/2019  INITIAL DEVELOPMENT CSR: 
