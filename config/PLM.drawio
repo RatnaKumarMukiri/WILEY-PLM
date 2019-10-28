@@ -1,4 +1,4 @@
-<mxfile modified="2019-10-28T15:05:54.478Z" host="www.draw.io" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="27ZE6IrUdOhn108QmEvX" version="12.1.7" type="github" pages="1">
+<mxfile modified="2019-10-28T15:06:46.721Z" host="www.draw.io" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="INCEcNqAsDvgk0F3FNCo" version="12.1.7" type="github" pages="1">
   <diagram id="ugZ9LgQXZQDwEc-XwA1F" name="Page-1">
     <mxGraphModel dx="1704" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -20,7 +20,7 @@
           <mxGeometry x="500" y="20" width="220" height="20" as="geometry"/>
         </mxCell>
         <mxCell id="pKMbjU2xyeOJQkZC159j-7" value="&lt;font style=&quot;font-size: 17px&quot;&gt;&lt;b&gt;Git repository&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontColor=#660000;" parent="1" vertex="1">
-          <mxGeometry x="50" y="20" width="130" height="20" as="geometry"/>
+          <mxGeometry x="165" y="10" width="130" height="20" as="geometry"/>
         </mxCell>
         <mxCell id="pKMbjU2xyeOJQkZC159j-8" value="UAT" style="ellipse;shape=cloud;strokeWidth=2;fontSize=14;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="520" y="205" width="150" height="80" as="geometry"/>
